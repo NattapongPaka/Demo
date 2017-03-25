@@ -1,4 +1,4 @@
-package com.example.nattapongpaka.demo;
+package com.example.nattapongpaka.demo.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,6 +1,6 @@
 package com.example.nattapongpaka.demo.manager;
 
-import com.example.nattapongpaka.demo.PhotoDaos;
+import com.example.nattapongpaka.demo.model.PhotoDaos;
 
 import java.util.List;
 

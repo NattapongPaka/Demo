@@ -1,6 +1,7 @@
 package com.example.nattapongpaka.demo.manager;
 
-import com.example.nattapongpaka.demo.Constance;
+import com.example.nattapongpaka.demo.util.Constance;
+import com.example.nattapongpaka.demo.util.ToStringConverterFactory;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -29,8 +30,8 @@ public class HttpManager {
                 .baseUrl(Constance.url + "/")
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())     //Converter to gson
-                //.addConverterFactory(new ToStringConverterFactory())    //Converter to string
-                .client(customClient())
+                .addConverterFactory(new ToStringConverterFactory())    //Converter to string
+                //.client(customClient())
                 .build();
         service = retrofit.create(ApiService.class);
     }

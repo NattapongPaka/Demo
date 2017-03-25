@@ -204,7 +204,7 @@ public class MainFragment extends Fragment implements EasyPermissions.Permission
         super.onActivityCreated(savedInstanceState);
         photoDaosList = new ArrayList<>();
         mainPresenter = new MainPresenter(getActivity(), this);
-        recycleAdapter = new RecycleAdapter(getContext(), photoDaosList);
+        recycleAdapter = new RecycleAdapter(getContext(), mainPresenter, photoDaosList);
         recycleView.setAdapter(recycleAdapter);
 
         if (NetworkUtils.getInstance().isNetworkConnected()) {
